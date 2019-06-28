@@ -1,12 +1,12 @@
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = ./meta-openembedded/
-	branch = master
+	branch = sumo
 [submodule "poky"]
 	path = poky
 	url = ./poky/
-	branch = master
+	branch = sumo
 [submodule "meta-raspberrypi"]
 	path = meta-raspberrypi
 	url = ./meta-raspberrypi/
-	branch = master
+	branch = sumo
