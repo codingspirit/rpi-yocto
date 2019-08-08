@@ -7,6 +7,9 @@ SRC_URI = "file://android-gadget-setup"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
+REQUIRED_DISTRO_FEATURES += "systemd"
+RDEPENDS_${PN} = "kernel-module-g-ffs"
+
 do_install() {
     install -d ${D}${bindir}
     install -m 0755 ${WORKDIR}/android-gadget-setup ${D}${bindir}

@@ -1,7 +1,10 @@
 
 FILESEXTRAPATHS_prepend:="${THISDIR}/${PN}:"
 
-SRC_URI += "file://*.cfg \
-"
+# Enable adb
+SRC_URI_append += "file://enable_adb-cp.cfg"
 
-KERNEL_CONFIG_FRAGMENTS += "${WORKDIR}/*.cfg"
+do_configure_append() {
+    ${S}/scripts/kconfig/merge_config.sh -m -O ${B} ${B}/.config ${WORKDIR}/*-cp.cfg
+}
+
