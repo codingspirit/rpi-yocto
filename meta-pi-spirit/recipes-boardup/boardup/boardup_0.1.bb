@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 # Setup ethernet0
 SRC_URI += "file://eth0.network"
-FILES_${PN} += "/etc/systemd/network/shrek"
+FILES_${PN} += "/etc/systemd/network/eth0.network"
 
 do_install() {
     install -d ${D}/etc/systemd/network
